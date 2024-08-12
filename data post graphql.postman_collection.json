@@ -1,0 +1,707 @@
+{
+	"info": {
+		"_postman_id": "f2f1f487-9eaf-4623-8ab5-a49797fd902e",
+		"name": "Services-battery-System-saving-data-to-Graphql ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26190900"
+	},
+	"item": [
+		{
+			"name": "Database",
+			"item": [
+				{
+					"name": "Data Local",
+					"item": [
+						{
+							"name": "get rms",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:2121/database/rms",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2121",
+									"path": [
+										"database",
+										"rms"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get inverter",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:2121/database/inverter",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2121",
+									"path": [
+										"database",
+										"inverter"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get mppt",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:2121/database/inverter",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2121",
+									"path": [
+										"database",
+										"inverter"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Setting",
+					"item": [
+						{
+							"name": "Setting RACK",
+							"item": [
+								{
+									"name": "View All Rack",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:2121/rack",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "2121",
+											"path": [
+												"rack"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "View Specific Rack",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:2121/rack/:rms_sn",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "2121",
+											"path": [
+												"rack",
+												":rms_sn"
+											],
+											"variable": [
+												{
+													"key": "rms_sn",
+													"value": ""
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "delete Rack",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:2121/rack/:rack_sn",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "2121",
+											"path": [
+												"rack",
+												":rack_sn"
+											],
+											"variable": [
+												{
+													"key": "rack_sn",
+													"value": ""
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "add Rack",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"rack_sn\":\"RLS002\",\r\n    \"uuid_user\":\"002\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:2121/rack",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "2121",
+											"path": [
+												"rack"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Setting RMS",
+							"item": [
+								{
+									"name": "View All Rms",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:2121/rms1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "2121",
+											"path": [
+												"rms1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "View Specific Rms",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:2121/rms1/:rms_sn",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "2121",
+											"path": [
+												"rms1",
+												":rms_sn"
+											],
+											"variable": [
+												{
+													"key": "rms_sn",
+													"value": ""
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "delete Rms",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:2121/rms1/:rms_sn",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "2121",
+											"path": [
+												"rms1",
+												":rms_sn"
+											],
+											"variable": [
+												{
+													"key": "rms_sn",
+													"value": ""
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "add Rms",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"rms_sn\":\"RMS003\",\r\n    \"rms_ip\":\"200.10.2.212\",\r\n    \"rack_sn\":\"RLS002\",\r\n    \"config\":{\r\n          \"note\": \"cms\",\r\n          \"frame_name\": \"default\",\r\n          \"total_cell\": 32,\r\n          \"uom_current\": \"A\",\r\n          \"capacity_new\": 10,\r\n          \"capacity_now\": 10,\r\n          \"uom_capacity\": \"KWH\",\r\n          \"cell_not_used\": \"4, 8, 9, 13, 14, 19, 23, 24, 28, 29, 34, 39, 44\",\r\n          \"uom_total_cell\": \"Pcs\",\r\n          \"maximum_current\": 200,\r\n          \"uom_temperature\": \"°C\",\r\n          \"uom_cell_voltage\": \"mV\",\r\n          \"maximum_temperature\": 56.8,\r\n          \"minimum_temperature\": 20.5,\r\n          \"maximum_cell_voltage\": 3600,\r\n          \"minimum_cell_voltage\": 2600,\r\n          \"maximum_different_cell\": 600,\r\n          \"total_frame\": 8\r\n        }  \r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:2121/rms1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "2121",
+											"path": [
+												"rms1"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Setting Inverter",
+							"item": [
+								{
+									"name": "View All Inverter",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:2121/inverter1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "2121",
+											"path": [
+												"inverter1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "View Specific Inverter",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:2121/inverter1/:inverter_sn",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "2121",
+											"path": [
+												"inverter1",
+												":inverter_sn"
+											],
+											"variable": [
+												{
+													"key": "inverter_sn",
+													"value": ""
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "delete Inverter",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:2121/inverter1/INV001",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "2121",
+											"path": [
+												"inverter1",
+												"INV001"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "add Inverter",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"device_sn\":\"INV001\",\r\n    \"inverter_ip\":\"200.10.2.220\",\r\n    \"rack_sn\":\"RLS001\" \r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:2121/inverter1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "2121",
+											"path": [
+												"inverter1"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Setting MPPT",
+							"item": [
+								{
+									"name": "View All MPPT",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:2121/mppt1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "2121",
+											"path": [
+												"mppt1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "View Specific MPPT",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:2121/mppt1/:mppt_sn",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "2121",
+											"path": [
+												"mppt1",
+												":mppt_sn"
+											],
+											"variable": [
+												{
+													"key": "mppt_sn",
+													"value": "mppt01"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "delete MPPT",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:2121/mppt1/:mppt_sn",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "2121",
+											"path": [
+												"mppt1",
+												":mppt_sn"
+											],
+											"query": [
+												{
+													"key": "sds",
+													"value": null,
+													"disabled": true
+												}
+											],
+											"variable": [
+												{
+													"key": "mppt_sn",
+													"value": ""
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "add MPPT",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"mppt_sn\":\"MPPT001\",\r\n    \"mppt_ip\":\"200.10.2.230\",\r\n    \"rack_sn\":\"RLS001\" \r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:2121/mppt1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "2121",
+											"path": [
+												"mppt1"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Setting Interval",
+							"item": [
+								{
+									"name": "View All Interval",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:2121/interval",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "2121",
+											"path": [
+												"interval"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "View Specific Interval",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:2121/interval/:device",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "2121",
+											"path": [
+												"interval",
+												":device"
+											],
+											"variable": [
+												{
+													"key": "device",
+													"value": ""
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "add Interval",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"device\":\"inverter\",\r\n    \"post_interval\":1\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:2121/interval",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "2121",
+											"path": [
+												"interval"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "delete Interval",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:2121/interval/:device",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "2121",
+											"path": [
+												"interval",
+												":device"
+											],
+											"variable": [
+												{
+													"key": "device",
+													"value": ""
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"description": "This is Setting interval post data local to graphql in minutes"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Data Fetching",
+			"item": [
+				{
+					"name": "View Data RMS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:2121/rms",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2121",
+							"path": [
+								"rms"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View Data Inverter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:2121/rms",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2121",
+							"path": [
+								"rms"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View Data MPPT",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:2121/mppt",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2121",
+							"path": [
+								"mppt"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Start",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2121/start",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2121",
+					"path": [
+						"start"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Stop",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2121/stop",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2121",
+					"path": [
+						"stop"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
